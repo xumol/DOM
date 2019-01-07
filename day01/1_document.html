@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>hello!!</span>
+    <h1>heihei</h1>
+    <!-- <form id="form1"></form> -->
+    <script>
+        //当window加载后
+        window.onload = function () {
+            //希望等网页加载后，再执行以下代码，以确保所有网页中的内容已经可用
+            //获得body元素 
+            var body = document.body;
+            console.log(body.nodeName);
+            //获得body下所有子元素，应该只有三个
+            var children = body.children;
+            console.log(children);
+             //获得body下第一个子元素，
+            var span = body.firstElementChild;
+            console.log(span);
+            //获得body下最后一个子元素，
+            var script = body.lastElementChild;
+            console.log(script);
+            //获取h1元素
+            var h1 = span.nextElementSibling;//span的弟弟
+            //var h1=script.previousElementSibling;//script的哥哥
+            console.log(h1)
+        }
+
+    </script>
+</body>
+
+</html>
